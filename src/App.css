@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Source+Sans+Pro&display=swap');
+
+:root {
+  --primary-color: #80ed99;
+  --primary-dark: #082032;
+  --gradient-background: linear-gradient(90deg, #80ed99 0%, #78ffd6 100%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color: #404040;
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.container {
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px 2px;
+  text-align: center;
+}
+
+h2 {
+  color: #707070;
+}
+
+a {
+  color: #404040;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #101010;
+}
+
+button:focus {
+  outline: none;
+}
+
+.heading {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  min-height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+  background-color: #00853e;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 16px;
+  border-left: 0;
+  background: #707070;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 0;
+}
+
+.clearfix {
+  display: block;
+}
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Marker tweaks */
+
+.mapboxgl-popup-close-button {
+  position: absolute;
+  right: 10px !important;
+  top: -5px !important;
+  border: 0;
+  border-radius: 0 3px 0 0;
+  cursor: pointer;
+  background-color: transparent;
+  transform: scale(1.7);
+  /* display: none; */
+}
+
+.close-button {
+  position: absolute;
+  right: 10px !important;
+  top: -5px !important;
+  border: 0;
+  border-radius: 0 3px 0 0;
+  cursor: pointer;
+  background-color: transparent;
+  transform: scale(1.7);
+  /* display: none; */
+}
+
+.mapboxgl-popup-content {
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  padding: 0 !important;
+  width: 180px;
+}
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
+}
+.mapboxgl-popup-content h3 {
+  background: #91c949;
+  color: #fff;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup-content h4 {
+  margin: 0;
+  display: block;
+  padding: 10px 10px 10px 10px;
+  font-weight: 400;
+}
+
+.mapboxgl-popup-content div {
+  padding: 10px;
+}
+
+.mapboxgl-container .leaflet-marker-icon {
+  cursor: pointer;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #91c949;
+}
+
+.marker-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.marker-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+.list-adress {
+  cursor: context-menu;
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+  background-color: #00853e;
+}
+
+.footer h4,
+.footer a {
+  text-align: center;
+  color: #eee;
+  font-weight: 400;
+}

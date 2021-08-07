@@ -1,0 +1,18 @@
+.navbar {
+  width: 100vw;
+  height: 3.75rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-content {
+  margin: 0;
+}
+
+.navbar-content > a {
+  margin-left: 3px;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+}
