@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactMapGL, {Marker, Popup} from 'react-map-gl';
 import mapboxgl from 'mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 import marker from '../../marker.svg'
@@ -46,7 +47,7 @@ function Map({ parkData, viewport, onViewportChange, onClick, popup, closePopup 
             <h4>{popup.neighborhood}</h4>
             <h4>{popup.county}</h4>
             <div
-              class="close-button"
+              className="close-button"
               type="button"
               onClick={closePopup}
               >

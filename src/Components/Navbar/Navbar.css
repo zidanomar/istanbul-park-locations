@@ -9,10 +9,22 @@
 
 .navbar-content {
   margin: 0;
+  margin-right: .5rem;
 }
 
-.navbar-content > a {
+.navbar > a {
   margin-left: 3px;
   text-decoration: underline;
   text-decoration-color: #fff;
+}
+
+.navbar-content, .navbar > a {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 578px) {
+  .navbar-content {
+    display: none;
+  }
 }

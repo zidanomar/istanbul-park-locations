@@ -9,6 +9,15 @@ function Sidebar({ parkData, onClick, filter, setInputFilter }) {
     setInputFilter(e.target.value)
   }
 
+  const closeHandler = () => {
+    setActive(false)
+  }
+  
+  const openHandler = () => {
+    setActive(true)
+  }
+  
+
   return (
     <div>
       <nav id="sideNav" style={ { left: active ? '0' : '-320px' } }  >
@@ -21,20 +30,19 @@ function Sidebar({ parkData, onClick, filter, setInputFilter }) {
               <div
                 key={park._id}
                 id={`listing-${index}`}
+                onClick={() => {
+                  onClick(park);
+                  closeHandler();
+                }}
                 className="item">
-                <h2 className="title" id={`link-${index}`}
-                  onClick={() => {
-                    onClick(park);
-                  }}
-                  >{park.NAME}
-                </h2>              
+                <h2 className="title" id={`link-${index}`}>{park.NAME}</h2>              
                 <h3 className="list-adress">{park.NEIGHBORHOOD_NAME} - {park.COUNTY_NAME}</h3>
               </div>
             )
           })}
         </div>
       </nav>
-      <div className={ active ? 'menu-btn open' : 'menu-btn'} onClick={() => setActive(!active)}>
+      <div className={ active ? 'menu-btn open' : 'menu-btn'} onClick={active ? closeHandler : openHandler}>
         <div className="menu-btn__burger"></div>
       </div>
     </div>

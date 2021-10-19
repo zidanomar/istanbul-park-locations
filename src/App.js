@@ -15,7 +15,7 @@ function App() {
     width: "100%",
     height: "100vh",
     zoom: 9,
-    transitionDuration: 2000,
+    transitionDuration: 1000,
     transitionInterpolator: new FlyToInterpolator()
   });
 
