@@ -1,9 +1,15 @@
 import React from 'react'
 import ReactMapGL, {Marker, Popup} from 'react-map-gl';
+import mapboxgl from 'mapbox-gl';
+
 
 import marker from '../../marker.svg'
 import './Map.css'
-function Map({ parkData, viewport, onViewportChange, onClick, popup, closePopup }) { 
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+
+function Map({ parkData, viewport, onViewportChange, onClick, popup, closePopup }) {
   return (
     <div id="map" className="map-container">
       <ReactMapGL
